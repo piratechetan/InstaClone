@@ -1,10 +1,10 @@
-import auth from 'react-native-firebase/auth'
+import auth from '@react-native-firebase/auth'
 import Snackbar from 'react-native-snackbar'
-import database from 'react-native-firebase/database'
+import database from '@react-native-firebase/database'
 
 
 export const signup = (data) => async (dispatch) => {
-    const {name,instaUsername,bio,email,password,country,image} =data
+    const {name,instaUsername,email,password,country,image} =data
 
     auth().createUserWithEmailAndPassword(email,password)
     .then((data)=>{
@@ -17,7 +17,6 @@ export const signup = (data) => async (dispatch) => {
             name,
             instaUsername,
             image,
-            bio,
             country,
             uid:data.user.uid
         })

@@ -2,7 +2,7 @@ import {SET_POST,ERROR_POST} from '../action/action.types'
 
 
 const initialState={
-    posts=null,
+    posts:null,
     loading:true,
     error:false
 };

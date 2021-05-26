@@ -1,4 +1,4 @@
-import database from 'react-native-firebase/database'
+import database from '@react-native-firebase/database'
 import {SET_POST,ERROR_POST} from './action.types'
 
 
