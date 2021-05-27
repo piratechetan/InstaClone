@@ -17,7 +17,7 @@ export const signup = (data) => async (dispatch) => {
             name,
             instaUsername,
             image,
-            country,
+            
             uid:data.user.uid
         })
         .then(()=>console.log('Data store successfully'))

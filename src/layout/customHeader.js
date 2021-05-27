@@ -1,6 +1,6 @@
 import React from 'react';
 import {} from 'react-native'
-import {Body,Right,Button,Icon,Title,Text,Header} from 'native-base'
+import {Body,Right,Button,Icon,Title,Text,Header,Left} from 'native-base'
 
 import {connect} from 'react-redux'
 import propTypes from 'prop-types'
@@ -16,7 +16,7 @@ const customHeader = ({signout,authState,navigation}) => {
          <Body>
              <Title>InstaClone</Title>
          </Body>
-         <Right>
+      <Left>
              {authState.isAuthenticated && (
                  <>
                  <Button
@@ -28,13 +28,13 @@ const customHeader = ({signout,authState,navigation}) => {
                  </Button>
                  <Button
                  transparent
-                 onpress={()=>signout()}
+                 onPress={()=>signout()}
                  >
                  <Icon name="log-out-outline" style={{color:'red'}} />
                  </Button>
                  </>
              )}
-         </Right>
+         </Left>
         </Header>
     )
 }
